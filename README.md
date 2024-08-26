@@ -71,7 +71,7 @@ docker run -it --init \
     -p 3000:3000 -p 9000:9000 -p 9443:9443 -p 8000:8000 -p 8999:8999 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     --name portainer-devkit \
-    portainer/dev-toolkit:2024.08
+    yajithd/dev-toolkit:2024.08
 ```
 
 Now you can access VScode directly at http://localhost:3000 and start coding (almost)!

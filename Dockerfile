@@ -62,6 +62,8 @@ RUN cd /tmp \
 # Install golangci-lint
 RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b /root/go/bin v1.60.3
 
+USER yajith
+
 # Configuring Golang
 ENV PATH="$PATH:/usr/local/go/bin:/root/go/bin"
 
