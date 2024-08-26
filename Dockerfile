@@ -9,7 +9,7 @@ EXPOSE 9000
 EXPOSE 8000
 
 # Set TERM as noninteractive to suppress debconf errors
-RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
 # Set default go version
 ARG GO_VERSION=go1.22.6.${TARGETOS}-${TARGETARCH}
