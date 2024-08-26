@@ -1,4 +1,4 @@
-FROM gitpod/openvscode-server:1.92.1
+FROM yajithd/openvscode-server:1.92.1
 
 ARG TARGETOS
 ARG TARGETARCH

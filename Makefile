@@ -12,7 +12,7 @@ clean:
 	docker buildx rm multiarch
 
 base: setup
-	docker buildx build --push --platform=linux/arm64,linux/amd64 -t portainer/dev-toolkit:$(VERSION) -f Dockerfile .
+	docker buildx build --push --platform=linux/arm64,linux/amd64 -t yajithd/dev-toolkit:$(VERSION) -f Dockerfile .
 
 alapenna:
 	docker buildx build --no-cache --load -t portainer-dev-toolkit -f user-toolkits/alapenna/Dockerfile .
