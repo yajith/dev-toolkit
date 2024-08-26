@@ -10,13 +10,13 @@ EXPOSE 8000
 
 # Set TERM as noninteractive to suppress debconf errors
 # RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
-ARG DEBIAN_FRONTEND=noninteractive
+# ARG DEBIAN_FRONTEND=noninteractive
 
 # Set default go version
 ARG GO_VERSION=go1.22.6.${TARGETOS}-${TARGETARCH}
 
 # Install packages
-RUN sudo apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq \
+RUN sudo apt-get update && DEBIAN_FRONTEND=noninteractive sudo apt-get install -yq \
     dialog \
     apt-utils \
     curl \
